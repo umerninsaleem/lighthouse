@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Notes</title>
+  <link rel='stylesheet' href='styles.css'>
+  <style>
+    .note-section { padding: 20px; border: 1px solid #333; margin: 20px; border-radius: 8px; }
+    .note-btn { background: #111; color: #f4f4f4; padding: 10px 20px; border: 1px solid #555; cursor: pointer; margin-top: 10px; }
+    .note-popup { display: none; background: #1a1a1a; color: #f4f4f4; padding: 15px; margin-top: 10px; border-radius: 6px; border: 1px solid #333; }
+  </style>
+  <script>
+    function togglePopup(id) {
+      var x = document.getElementById(id);
+      x.style.display = (x.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href='index.html'>Home</a></li>
+        <li><a href='about.html'>About</a></li>
+        <li><a href='courses.html'>Courses</a></li>
+        <li><a href='notes.html'>Notes</a></li>
+        <li><a href='book.html'>Book a Session</a></li>
+        <li><a href='contact.html'>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class='content'>
+      <h2>Notes</h2>
+
+      <div class='note-section'>
+        <h3>🔭 Astrophysics Notes</h3>
+        <button class='note-btn' onclick="togglePopup('astro')">Wanna learn?</button>
+        <div id='astro' class='note-popup'>
+          <ul>
+            <li>The speed of light is approximately 299,792 kilometers per second.</li>
+            <li>A neutron star is so dense that just one teaspoon of it would weigh around a billion tons.</li>
+            <li>Our galaxy, the Milky Way, is just one of over 2 trillion galaxies in the observable universe.</li>
+            <li>Black holes do not “suck” things in — objects fall into them due to gravity.</li>
+            <li>The universe is expanding — galaxies are moving away from each other, and space itself is stretching.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class='note-section'>
+        <h3>✍️ English Writing Tips</h3>
+        <button class='note-btn' onclick="togglePopup('english')">Wanna learn?</button>
+        <div id='english' class='note-popup'>
+          <ul>
+            <li>Use active voice for clarity and strength in your writing.</li>
+            <li>Keep your sentences concise — avoid overly complex structures unless necessary.</li>
+            <li>Use varied sentence starters and avoid repetition.</li>
+            <li>Expand your vocabulary by reading literature, not just textbooks.</li>
+            <li>Always proofread — even small grammar mistakes can affect the tone and clarity.</li>
+            <li>Begin essays with a hook, and end with a memorable conclusion.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class='note-section'>
+        <h3>➗ Math Rules & Basics</h3>
+        <button class='note-btn' onclick="togglePopup('math')">Wanna learn?</button>
+        <div id='math' class='note-popup'>
+          <ul>
+            <li>BODMAS Rule: Brackets → Orders → Division → Multiplication → Addition → Subtraction.</li>
+            <li>Commutative Property: a + b = b + a and ab = ba</li>
+            <li>Distributive Law: a(b + c) = ab + ac</li>
+            <li>To find percentage: (part/whole) × 100</li>
+            <li>Area of triangle = ½ × base × height</li>
+            <li>Perimeter of rectangle = 2(l + w)</li>
+            <li>Pythagoras Theorem: a² + b² = c²</li>
+            <li>Always simplify expressions before solving equations.</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>

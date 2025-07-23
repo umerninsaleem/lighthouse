@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book a Session</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    form {
+      max-width: 500px;
+      margin: 40px auto;
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+    label, input, textarea {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+    input, textarea {
+      padding: 10px;
+      background: #111;
+      color: #f4f4f4;
+      border: 1px solid #333;
+      border-radius: 6px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #222;
+      color: #f4f4f4;
+      border: 1px solid #444;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    button:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="book.html">Book a Session</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content">
+      <h2>Book a Session</h2>
+      <p>Fill out this form to request a free learning session with our team.</p>
+
+      <form action="https://formsubmit.co/thelighthouse.org.25@gmail.com" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="student_email">Your Email</label>
+        <input type="email" name="student_email" id="student_email" required>
+
+        <label for="message">What subject or topic would you like help with?</label>
+        <textarea name="message" id="message" rows="4" required></textarea>
+
+        <!-- Anti-spam + Redirect -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://thelighthouseorg.netlify.app/thankyou.html">
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

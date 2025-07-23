@@ -1,0 +1,33 @@
+body { background: #0f0f0f; color: #f4f4f4; font-family: Georgia, serif; margin: 0; padding: 0; } nav ul { list-style: none; display: flex; justify-content: center; padding: 0; background: #111; } nav ul li { margin: 0 15px; } nav ul li a { color: #f4f4f4; text-decoration: none; padding: 10px; display: block; } nav ul li a:hover { color: gold; } .hero { padding: 50px; text-align: center; } .quote.typing { border-right: .1em solid gold; animation: typing 4s steps(40, end), blink-caret .75s step-end infinite; } @keyframes typing { from { width: 0 } to { width: 100% } } @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: gold; } } section { padding: 40px; max-width: 800px; margin: auto; } .course, .note { margin-bottom: 30px; } form { display: flex; flex-direction: column; gap: 10px; max-width: 400px; margin: auto; } input, textarea { padding: 10px; border-radius: 6px; border: none; } button { padding: 10px; background: gold; color: black; border: none; border-radius: 6px; cursor: pointer; } footer { text-align: center; padding: 20px; background: #111; margin-top: 40px; color: #ccc; }
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.slide-in {
+  animation: slideIn 1s ease forwards;
+}
+
+
+@font-face {
+  font-family: 'Algerian';
+  src: local('Algerian'), local('Algerian Regular');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.algerian-title {
+  font-family: 'Algerian', serif;
+  font-size: 3rem;
+  line-height: 1.2;
+  color: #f4f4f4;
+  margin-bottom: 20px;
+  animation: slideIn 1s ease forwards;
+  text-align: center;
+}
+
+.algerian-title .highlight {
+  display: block;
+  color: gold;
+}
