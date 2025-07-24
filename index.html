@@ -46,13 +46,14 @@
     <p>&copy; 2025 The Lighthouse</p>
   </footer>
 
-  <!-- Falling Leaves Script -->
+  <!-- 🌿 Falling Leaves Script (top-left only) -->
   <script>
-    for (let i = 0; i < 15; i++) {
-      const leaf = document.createElement('div');
-      leaf.classList.add('falling-leaf');
-      leaf.style.setProperty('--x', Math.random());
-      leaf.style.setProperty('--speed', Math.random());
+    for (let i = 0; i < 12; i++) {
+      const leaf = document.createElement('img');
+      leaf.src = 'leaf.png';
+      leaf.className = 'falling-leaf';
+      leaf.style.setProperty('--x', Math.random() * 0.2);  // Only top-left
+      leaf.style.setProperty('--speed', (Math.random() * 1.5 + 0.5).toFixed(2));
       document.body.appendChild(leaf);
     }
   </script>
