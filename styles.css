@@ -158,9 +158,13 @@ footer {
   position: absolute;
   top: -100px;
   width: 40px;
-  height: auto;
+  height: 40px;
   pointer-events: none;
   animation: fall linear infinite;
   animation-duration: calc(8s + var(--speed) * 4s);
   left: calc(100% * var(--x));
+  background-image: url('leaf.png'); /* This assumes 'leaf.png' is in the same folder */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
