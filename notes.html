@@ -1,42 +1,76 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-  <meta charset='UTF-8'>
+  <meta charset="UTF-8">
   <title>Notes</title>
-  <link rel='stylesheet' href='styles.css'>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="images/logo-circle.png">
   <style>
-    .note-section { padding: 20px; border: 1px solid #333; margin: 20px; border-radius: 8px; }
-    .note-btn { background: #111; color: #f4f4f4; padding: 10px 20px; border: 1px solid #555; cursor: pointer; margin-top: 10px; }
-    .note-popup { display: none; background: #1a1a1a; color: #f4f4f4; padding: 15px; margin-top: 10px; border-radius: 6px; border: 1px solid #333; }
+    .note-section {
+      padding: 20px;
+      border: 1px solid #333;
+      margin: 20px;
+      border-radius: 8px;
+    }
+
+    .note-btn {
+      background: #111;
+      color: #f4f4f4;
+      padding: 10px 20px;
+      border: 1px solid #555;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .note-popup {
+      display: none;
+      background: #1a1a1a;
+      color: #f4f4f4;
+      padding: 15px;
+      margin-top: 10px;
+      border-radius: 6px;
+      border: 1px solid #333;
+    }
   </style>
   <script>
     function togglePopup(id) {
-      var x = document.getElementById(id);
+      const x = document.getElementById(id);
       x.style.display = (x.style.display === "block") ? "none" : "block";
     }
+
+    // Enter key navigation
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        const pages = ['index.html', 'about.html', 'courses.html', 'notes.html', 'book.html', 'contact.html'];
+        const current = window.location.pathname.split('/').pop();
+        const next = pages[(pages.indexOf(current) + 1) % pages.length];
+        window.location.href = next;
+      }
+    });
   </script>
 </head>
 <body>
   <header>
     <nav>
       <ul>
-        <li><a href='index.html'>Home</a></li>
-        <li><a href='about.html'>About</a></li>
-        <li><a href='courses.html'>Courses</a></li>
-        <li><a href='notes.html'>Notes</a></li>
-        <li><a href='book.html'>Book a Session</a></li>
-        <li><a href='contact.html'>Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="book.html">Book a Session</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
+
   <main class="hero slide-in">
-    <section class='slide-in'>
+    <section class="slide-in">
       <h2>Notes</h2>
 
-      <div class='note-section'>
+      <div class="note-section">
         <h3>🔭 Astrophysics Notes</h3>
-        <button class='note-btn' onclick="togglePopup('astro')">Wanna learn?</button>
-        <div id='astro' class='note-popup'>
+        <button class="note-btn" onclick="togglePopup('astro')">Wanna learn?</button>
+        <div id="astro" class="note-popup">
           <ul>
             <li>The speed of light is approximately 299,792 kilometers per second.</li>
             <li>A neutron star is so dense that just one teaspoon of it would weigh around a billion tons.</li>
@@ -47,10 +81,10 @@
         </div>
       </div>
 
-      <div class='note-section'>
+      <div class="note-section">
         <h3>✍️ English Writing Tips</h3>
-        <button class='note-btn' onclick="togglePopup('english')">Wanna learn?</button>
-        <div id='english' class='note-popup'>
+        <button class="note-btn" onclick="togglePopup('english')">Wanna learn?</button>
+        <div id="english" class="note-popup">
           <ul>
             <li>Use active voice for clarity and strength in your writing.</li>
             <li>Keep your sentences concise — avoid overly complex structures unless necessary.</li>
@@ -62,10 +96,10 @@
         </div>
       </div>
 
-      <div class='note-section'>
+      <div class="note-section">
         <h3>➗ Math Rules & Basics</h3>
-        <button class='note-btn' onclick="togglePopup('math')">Wanna learn?</button>
-        <div id='math' class='note-popup'>
+        <button class="note-btn" onclick="togglePopup('math')">Wanna learn?</button>
+        <div id="math" class="note-popup">
           <ul>
             <li>BODMAS Rule: Brackets → Orders → Division → Multiplication → Addition → Subtraction.</li>
             <li>Commutative Property: a + b = b + a and ab = ba</li>
