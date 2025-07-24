@@ -4,6 +4,18 @@
   <meta charset="UTF-8">
   <title>Book a Session</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="images/logo-circle.png">
+  <script>
+    // Enter key navigation
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        const pages = ['index.html', 'about.html', 'courses.html', 'notes.html', 'book.html', 'contact.html'];
+        const current = window.location.pathname.split('/').pop();
+        const next = pages[(pages.indexOf(current) + 1) % pages.length];
+        window.location.href = next;
+      }
+    });
+  </script>
   <style>
     form {
       max-width: 500px;
@@ -11,7 +23,7 @@
       background-color: #1a1a1a;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     label, input, textarea {
       display: block;
@@ -55,7 +67,7 @@
   </header>
 
   <main class="slide-in">
-    <section class="content">
+    <section class="content slide-in">
       <h2>Book a Session</h2>
       <p>Fill out this form to request a free learning session with our team.</p>
 
