@@ -1,1 +1,74 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Courses</title><link rel='stylesheet' href='styles.css'></head><body><header><nav><ul><li><a href='index.html'>Home</a></li><li><a href='about.html'>About</a></li><li><a href='courses.html'>Courses</a></li><li><a href='notes.html'>Notes</a></li><li><a href='book.html'>Book a Session</a></li><li><a href='contact.html'>Contact</a></li></ul></nav></header><main class="slide-in"><section><h2>Courses</h2><div class='course'><h3>Literature (English)</h3><p>Literature is more than language — it’s the art of survival through stories. From poetry to essays, we explore the power of expression and reflection.</p></div><div class='course'><h3>Math (Basic Concepts)</h3><p>Math is the quiet language behind how everything works. With basics and real-world problem solving, we make math simple, beautiful, and alive.</p></div><div class='course'><h3>Biology</h3><p>Biology teaches us how life breathes, heals, and evolves. From cells to ecosystems, we explore how life is beautifully interconnected.</p></div><div class='course'><h3>Physics</h3><p>Physics is curiosity in motion — a way to ask, “Why does this happen?” and explore the universe’s most fascinating rules.</p></div><div class='course'><h3>Chemistry</h3><p>Chemistry helps us understand change — in matter and mindset. We make it visual, relevant, and empowering.</p></div><div class='course'><h3>Astrophysics</h3><p>Astrophysics invites us to think bigger than ourselves, to look up and wonder. We explore black holes, galaxies, and the secrets of the universe.</p></div></section></main><footer><p>&copy; 2025 The Lighthouse</p></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Courses</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="images/logo-circle.png">
+  <script>
+    // Enter key navigation
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        const pages = ['index.html', 'about.html', 'courses.html', 'notes.html', 'book.html', 'contact.html'];
+        const current = window.location.pathname.split('/').pop();
+        const next = pages[(pages.indexOf(current) + 1) % pages.length];
+        window.location.href = next;
+      }
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="book.html">Book a Session</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="slide-in">
+    <section class="slide-in">
+      <h2>Courses</h2>
+
+      <div class="course">
+        <h3>Literature (English)</h3>
+        <p>Literature is more than language — it’s the art of survival through stories. From poetry to essays, we explore the power of expression and reflection.</p>
+      </div>
+
+      <div class="course">
+        <h3>Math (Basic Concepts)</h3>
+        <p>Math is the quiet language behind how everything works. With basics and real-world problem solving, we make math simple, beautiful, and alive.</p>
+      </div>
+
+      <div class="course">
+        <h3>Biology</h3>
+        <p>Biology teaches us how life breathes, heals, and evolves. From cells to ecosystems, we explore how life is beautifully interconnected.</p>
+      </div>
+
+      <div class="course">
+        <h3>Physics</h3>
+        <p>Physics is curiosity in motion — a way to ask, “Why does this happen?” and explore the universe’s most fascinating rules.</p>
+      </div>
+
+      <div class="course">
+        <h3>Chemistry</h3>
+        <p>Chemistry helps us understand change — in matter and mindset. We make it visual, relevant, and empowering.</p>
+      </div>
+
+      <div class="course">
+        <h3>Astrophysics</h3>
+        <p>Astrophysics invites us to think bigger than ourselves, to look up and wonder. We explore black holes, galaxies, and the secrets of the universe.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 The Lighthouse</p>
+  </footer>
+</body>
+</html>
