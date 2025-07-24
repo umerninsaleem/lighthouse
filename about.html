@@ -1,36 +1,50 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-  <meta charset='UTF-8'>
+  <meta charset="UTF-8">
   <title>About</title>
-  <link rel='stylesheet' href='styles.css'>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="images/logo-circle.png">
+  <script>
+    // Enter key navigation
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        const pages = ['index.html', 'about.html', 'courses.html', 'notes.html', 'book.html', 'contact.html'];
+        const current = window.location.pathname.split('/').pop();
+        const next = pages[(pages.indexOf(current) + 1) % pages.length];
+        window.location.href = next;
+      }
+    });
+  </script>
 </head>
 <body>
   <header>
     <nav>
       <ul>
-        <li><a href='index.html'>Home</a></li>
-        <li><a href='about.html'>About</a></li>
-        <li><a href='courses.html'>Courses</a></li>
-        <li><a href='notes.html'>Notes</a></li>
-        <li><a href='book.html'>Book a Session</a></li>
-        <li><a href='contact.html'>Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="book.html">Book a Session</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
+
   <main class="slide-in">
-    <section class='content slide-in'>
+    <section class="content slide-in">
       <h2>Meet the Founder</h2>
-      <p>I’m Muhammad Umer Bin Saleem, the founder of The Lighthouse and an O Level student. This initiative began from a very personal place. I’ve lived through challenges — emotional, societal, and financial — that made me feel unseen, unheard, and limited. But within that darkness, I discovered something powerful: resilience. Rather than staying silent, I chose to speak. Rather than giving up, I chose to rise — not just for myself, but for those who couldn’t.</p>
-      <p>I realized that many students around me — especially girls — were facing similar struggles, often with even fewer opportunities. That’s when I made a promise to myself: I would be the person I once needed. And that’s exactly what The Lighthouse stands for — being a light for those still in the shadows.</p>
+      <p>I’m Muhammad Umer Bin Saleem, the founder of The Lighthouse and an O Level student. This initiative began from a very personal place...</p>
+      <p>I realized that many students around me — especially girls — were facing similar struggles...</p>
 
       <h2>Our Mission</h2>
-      <p>The Lighthouse is a student-led platform created to provide free educational resources, mentorship, and support to anyone in need — with a special focus on underprivileged girls. We believe that education should not be gated by class, gender, or circumstance. Everyone deserves a chance to learn, to grow, and to step into their power.</p>
-      <p>Our mission is to build a safe, accessible, and empowering space — where learning is free, confidence is nurtured, and potential is limitless. We are not just helping students study; we are helping them believe in themselves. We are not here to escape the darkness — we are here to light the way through it.</p>
+      <p>The Lighthouse is a student-led platform created to provide free educational resources, mentorship, and support...</p>
+      <p>Our mission is to build a safe, accessible, and empowering space — where learning is free...</p>
 
       <h2>Our Team</h2>
-      <p>Our team is made up of ten passionate students from diverse academic paths — including O Level, Matriculation, and University. We're students too — just slightly more privileged — and that’s exactly why we feel responsible to uplift others. Each member contributes their own talent: whether it's creating notes, leading sessions, handling outreach, or building digital resources. We work together to ensure that no girl is left behind in her pursuit of knowledge and self-worth.</p>
+      <p>Our team is made up of ten passionate students from diverse academic paths...</p>
     </section>
   </main>
 </body>
 </html>
+
